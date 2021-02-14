@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
+import com.laborofloathing.colormyviews.R.*
 import com.laborofloathing.colormyviews.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,20 +14,23 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, layout.activity_main)
         setListeners()
     }
 
     private fun setListeners() {
         val clickableViews: List<View> =
-            listOf(binding.boxOneText,
-                    binding.boxTwoText,
-                    binding.boxThreeText,
-                    binding.boxFourText,
-                    binding.boxFiveText)
+                listOf(binding.boxOneText,
+                        binding.boxTwoText,
+                        binding.boxThreeText,
+                        binding.boxFourText,
+                        binding.boxFiveText,
+                        binding.redButton,
+                        binding.yellowButton,
+                        binding.greenButton)
 
         for (item in clickableViews) {
-            item.setOnClickListener {makeColored(it)}
+            item.setOnClickListener { makeColored(it) }
         }
     }
 
@@ -41,6 +45,11 @@ class MainActivity : AppCompatActivity() {
             binding.boxThreeText.id -> view.setBackgroundResource(android.R.color.holo_green_light)
             binding.boxFourText.id -> view.setBackgroundResource(android.R.color.holo_green_dark)
             binding.boxFiveText.id -> view.setBackgroundResource(android.R.color.holo_green_light)
+
+            //bottom buttons
+            binding.redButton.id -> binding.boxThreeText.setBackgroundResource(color.my_red)
+            binding.yellowButton.id -> binding.boxFourText.setBackgroundResource(color.my_yellow)
+            binding.greenButton.id -> binding.boxFiveText.setBackgroundResource(color.my_green)
 
             else -> view.setBackgroundColor(Color.LTGRAY)
         }

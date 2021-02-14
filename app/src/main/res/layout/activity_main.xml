@@ -93,9 +93,74 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/tap_the_boxes_and_buttons"
+            android:textSize="16sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/label_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/label_text" />
+
+        <TextView
+            android:id="@+id/warning_label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/warning"
+            android:textSize="30sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/warning_text"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/warning_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/does_not_play_well_with_children"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/yellow_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/warning_label_text"
+            app:layout_constraintTop_toBottomOf="@+id/info_text" />
+
+        <Button
+            android:id="@+id/yellow_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/yellow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/green_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/red_button" />
+
+        <Button
+            android:id="@+id/red_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/yellow_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/green_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/yellow_button" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

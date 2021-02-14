@@ -10,4 +10,9 @@
     <string name="button_green">GREEN</string>
     <string name="how_to_play">How to play</string>
     <string name="tap_the_boxes_and_buttons">Tap the screen and buttons</string>
+    <string name="warning">Warning:</string>
+    <string name="does_not_play_well_with_children">This app does not play well with children who like to get their greasy little fingerprints on EVERYTHING.</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+    <string name="green">Green</string>
 </resources>
