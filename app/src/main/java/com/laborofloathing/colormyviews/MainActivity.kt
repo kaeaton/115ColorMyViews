@@ -47,11 +47,21 @@ class MainActivity : AppCompatActivity() {
             binding.boxFiveText.id -> view.setBackgroundResource(android.R.color.holo_green_light)
 
             //bottom buttons
-            binding.redButton.id -> binding.boxThreeText.setBackgroundResource(color.my_red)
-            binding.yellowButton.id -> binding.boxFourText.setBackgroundResource(color.my_yellow)
-            binding.greenButton.id -> binding.boxFiveText.setBackgroundResource(color.my_green)
+            binding.redButton.id -> randomBox().setBackgroundResource(color.my_red)
+            binding.yellowButton.id -> randomBox().setBackgroundResource(color.my_yellow)
+            binding.greenButton.id -> randomBox().setBackgroundResource(color.my_green)
 
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
+    }
+
+    private fun randomBox(): View {
+        val viewChoices: List<View> =
+                listOf(binding.boxOneText,
+                        binding.boxTwoText,
+                        binding.boxThreeText,
+                        binding.boxFourText,
+                        binding.boxFiveText)
+        return viewChoices.random()
     }
 }
